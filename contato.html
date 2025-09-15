@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a D&G Development. Converse conosco sobre seu projeto e descubra como podemos ajudar.">
+    <meta name="keywords" content="contato, e-mail, formulário, D&G, gustavoalvesneves77@gmail.com">
+    <title>Contato - D&G Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">D&G Development</a>
+            <nav>
+                <ul>
+                    <li><a href="solucoes.html">Soluções</a></li>
+                    <li><a href="cases.html">Cases</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contato-section" style="min-height: calc(100vh - 100px); padding-top: 100px;">
+            <div class="container">
+                <h2 class="section-title">Fale Conosco</h2>
+                <p class="section-subtitle">Estamos prontos para ouvir sua ideia. Preencha o formulário abaixo e entraremos em contato o mais rápido possível.</p>
+                
+                <form class="contact-form" action="https://formspree.io/f/myzdowrj" method="POST">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="_replyto" required>
+
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone">
+                    
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html" />
+                    
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 D&G Development. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <a href="https://wa.me/5511987654321" class="whatsapp-btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
+</body>
+</html>
