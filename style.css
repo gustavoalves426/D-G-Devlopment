@@ -2,10 +2,10 @@
 :root {
     --primary-color: #F0F0F0; /* Cinza Claro para o texto principal */
     --secondary-color: #2B2B2B; /* Cinza Escuro para seções secundárias */
-    --accent-color: #00ced1c4;   /* Turquesa Neon para destaque */
-    --text-color: #FFFFFF;     /* Cor principal do texto */
+    --accent-color: #00ced1c4;  /* Turquesa Neon para destaque */
+    --text-color: #F0F0F0; /* Cor principal do texto */
     --text-dark-color: #1A1A1A; /* Cor de texto em fundos claros */
-    --bg-dark-color: #1A1A1A;  /* Fundo principal do corpo (preto quase) */
+    --bg-dark-color: #1A1A1A; /* Fundo principal do corpo (preto quase) */
 }
 
 /* Estilos Gerais */
@@ -173,7 +173,7 @@ nav ul li a:hover {
     background-color: #3b3b3b;
     padding: 40px;
     border-radius: 10px;
-    width: 30%;
+    flex: 1 1 300px;
     transition: transform 0.3s ease;
 }
 
@@ -249,10 +249,6 @@ footer {
 
     .solucoes-grid {
         flex-direction: column;
-    }
-
-    .solucao-card {
-        width: 100%;
     }
 }
 
@@ -343,6 +339,18 @@ footer {
 .contact-form button {
     border: none;
     cursor: pointer;
+}
+
+/* Animação de Surgimento (Scroll Reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* -- Responsividade do Menu -- */
@@ -441,4 +449,61 @@ footer {
     .nav-links-wrapper.is-open {
         transform: translateX(0);
     }
+}
+
+/* Estilos para o Modo Claro */
+body.light-mode {
+    --primary-color: #1A1A1A;
+    --secondary-color: #F0F0F0;
+    --accent-color: #00ced1c4;
+    --text-color: #1A1A1A;
+    --text-dark-color: #FFFFFF;
+    --bg-dark-color: #F0F0F0;
+    background-color: var(--bg-dark-color);
+}
+
+.light-mode header {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.light-mode .solucoes-section, .light-mode .contato-section, .light-mode .faq-section {
+    color: var(--text-color);
+}
+
+.light-mode .solucao-card, .light-mode .faq-item, .light-mode .case-study {
+    background-color: #E6E6E6;
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+    background-color: #E6E6E6;
+    border: 1px solid #CCC;
+    color: var(--text-color);
+}
+
+/* Estilo para o Botão de Alternar Tema (Posição Fixa) */
+.btn-theme-toggle {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 25px;    /* Mesma distância do fundo que o WhatsApp */
+    left: 25px;      /* Posiciona 25px da esquerda */
+    width: 60px;     /* Mesma largura do WhatsApp */
+    height: 60px;    /* Mesma altura do WhatsApp */
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Aumenta o ícone */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra similar ao WhatsApp */
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-theme-toggle:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    background-color: var(--accent-color);
+    color: var(--text-color);
 }
