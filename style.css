@@ -481,13 +481,13 @@ body.light-mode {
     color: var(--text-color);
 }
 
-/* Estilo para o Botão de Alternar Tema (Posição Fixa) */
+/* Estilo para o Botão de Alternar Tema (Lado Oposto) */
 .btn-theme-toggle {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 25px;    /* Mesma distância do fundo que o WhatsApp */
-    left: 25px;      /* Posiciona 25px da esquerda */
-    width: 60px;     /* Mesma largura do WhatsApp */
-    height: 60px;    /* Mesma altura do WhatsApp */
+    position: fixed; /* Essencial para o botão flutuar */
+    bottom: 25px;
+    left: 25px;
+    width: 60px;
+    height: 60px;
     background-color: transparent;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
@@ -495,15 +495,15 @@ body.light-mode {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem; /* Aumenta o ícone */
+    font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra similar ao WhatsApp */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-theme-toggle:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.1);
     background-color: var(--accent-color);
     color: var(--text-color);
 }
