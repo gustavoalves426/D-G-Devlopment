@@ -507,3 +507,15 @@ body.light-mode {
     background-color: var(--accent-color);
     color: var(--text-color);
 }
+
+@media (max-width: 480px) {
+    .btn-theme-toggle, .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+    }
+
+    .btn-theme-toggle {
+        left: 15px;
+    }
+}
